@@ -1,4 +1,4 @@
-package open.source.agriculture.chaquitaclla.chaquitacllaplatformopen.crops.application.internal.queryservices;
+package warusmart.crops.application.internal.queryservices;
 
 import warusmart.crops.domain.model.aggregates.Crop;
 import warusmart.crops.domain.model.entities.Care;
@@ -15,31 +15,18 @@ import java.util.Optional;
 
 @Service
 public class CropQueryServiceImpl implements CropQueryService {
-
-    private final CropRepository cropRepository;
-
-    public CropQueryServiceImpl(CropRepository cropRepository) {
-        this.cropRepository = cropRepository;
+    @Override
+    public Optional<Crop> handle(GetCropByIdQuery query) {
+        return Optional.empty();
     }
 
-
+    @Override
+    public List<Crop> handle(GetAllCropsQuery query) {
+        return List.of();
+    }
 
     @Override
     public Optional<Care> handle(GetCaresByCropIdQuery query) {
-        return cropRepository.findCareByCropId(query.cropId());
-    }
-}
-    public List<Crop> handle(GetAllCropsQuery query) {
-        return cropRepository.findAll();
-    }
-
-    @Override
-    public Optional<Crop> handle(GetCropByIdQuery query) {
-        return cropRepository.findById(query.id());
-    }
-
-    @Override
-    public Optional<Crop> findById(Long id) {
-        return cropRepository.findById(id);
+        return Optional.empty();
     }
 }

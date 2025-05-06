@@ -1,7 +1,6 @@
 package warusmart.crops.interfaces.REST;
 
 import warusmart.crops.domain.model.aggregates.Crop;
-import open.source.agriculture.chaquitaclla.chaquitacllaplatformopen.crops.domain.model.queries.*;
 import warusmart.crops.domain.model.queries.GetAllDiseasesQuery;
 import warusmart.crops.domain.model.queries.GetDiseasesByCropIdQuery;
 import warusmart.crops.domain.services.CropCommandService;

@@ -2,7 +2,6 @@ package warusmart.crops.interfaces.REST;
 
 import warusmart.crops.domain.model.aggregates.Crop;
 import warusmart.crops.domain.model.entities.Pest;
-import open.source.agriculture.chaquitaclla.chaquitacllaplatformopen.crops.domain.model.queries.*;
 import warusmart.crops.domain.model.queries.GetAllPestsQuery;
 import warusmart.crops.domain.services.CropCommandService;
 import warusmart.crops.domain.services.PestCommandService;

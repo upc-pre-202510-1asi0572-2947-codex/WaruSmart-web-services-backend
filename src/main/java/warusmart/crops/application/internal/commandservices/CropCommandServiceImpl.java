@@ -1,35 +1,32 @@
-import warusmart.crops.domain.model.services.CropCommandService;
+package warusmart.crops.application.internal.commandservices;
+
+import warusmart.crops.domain.model.aggregates.Crop;
+import warusmart.crops.domain.model.commands.CreateCropCommand;
+import warusmart.crops.domain.model.commands.DeleteCropCommand;
+import warusmart.crops.domain.model.commands.UpdateCropCommand;
+import warusmart.crops.domain.services.CropCommandService;
+
+import java.util.Optional;
 
 public class CropCommandServiceImpl implements CropCommandService {
-    private final CropCommandService cropCommandService;
 
-    public CropCommandServiceImpl(CropCommandService cropCommandService) {
-        this.cropCommandService = cropCommandService;
-     ProjectBranch
-        return null;
-    }
-}
-        Crop crop = new Crop(command.name(), command.description(), command.diseases(), command.pests());
-        crop = cropRepository.save(crop);
-        return crop.getId();
+    @Override
+    public Long handle(CreateCropCommand command) {
+        return 0L;
     }
 
     @Override
     public Optional<Crop> handle(UpdateCropCommand command) {
-        return cropRepository.findById(command.cropId()).map(existingCrop -> {
-            existingCrop.setName(command.name());
-            existingCrop.setDescription(command.description());
-            return cropRepository.save(existingCrop);
-        });
+        return Optional.empty();
     }
 
     @Override
     public void handle(DeleteCropCommand command) {
-        cropRepository.deleteById(command.cropId());
+
     }
 
     @Override
     public void save(Crop crop) {
-        cropRepository.save(crop);
+
     }
 }
