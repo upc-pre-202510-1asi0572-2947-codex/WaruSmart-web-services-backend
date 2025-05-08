@@ -10,19 +10,20 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OpenApiConfiguration {
     @Bean
-    public OpenAPI chaquitacllaPlatformOpenApi() {
+    public OpenAPI waruSmartPlatformOpenApi() {
         // General configuration
         var openApi = new OpenAPI();
         openApi
                 .info(new Info()
-                        .title("Chaquitaclla Platform API")
-                        .description("Chaquitaclla Platform application REST API documentation.")
+                        .title("Waru Smart Platform API")
+                        .description("Waru Smart Platform application REST API documentation.")
                         .version("v1.0.0")
                         .license(new License().name("Apache 2.0")
                                 .url("https://springdoc.org")))
                 .externalDocs(new ExternalDocumentation()
-                        .description("Chaquitaclla Platform Documentation")
-                        .url("https://github.com/SI729-WS53-AgriCulture/Chaquitaclla-web-services"));
+                        .description("Waru Smart Platform Documentation")
+                        .url("https://github.com/upc-pre-202510-1asi0572-2947-codex")
+                );
         return openApi;
     }
 }
